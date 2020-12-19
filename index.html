@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Todo app</title>
+
+  <link rel="stylesheet" href="todo.css" />
+
+</head>
+<body class="dark">
+
+  <main>
+
+    <div class="container">
+      <div class="heading">
+        <h1>TODO</h1>
+        <button id="themeSwitcher" title="Switch Theme"><i class="theme-icon"></i></button>
+      </div>
+
+      <div class="input-cont">
+        <div class="circle"></div>
+        <input type="text" id="todoInput" placeholder="Create a new todo..." title="New todo" autofocus />
+      </div>
+
+      <div class="todo-list-cont">
+        <div class="todo-list">
+          <!-- List item format
+          <div class="list-item-holder" data-index="0">
+            <div class="list-item">
+              <label>
+                <input type="checkbox" name="todoCheck" />
+                <span class="custom-checkbox"></span>
+                <span class="todo-task">Jog</span>
+              </label>
+              <button class="delete-button" title="Delete button"><i class="close-icon"></i></button>
+            </div>
+          </div>
+          -->
+        </div>
+
+        <div id="noItemsCont" class="hide">No items</div>
+
+        <div class="options-cont hide">
+          <div class="count-cont">
+            <span id="activeCount"></span>
+          </div>
+
+          <div class="filters all">
+            <button id="all">All</button>
+            <button id="active">Active</button>
+            <button id="completed">Completed</button>
+          </div>
+
+          <button id="clearCompleted">Clear Completed</button>
+        </div>
+      </div>
+
+      <div class="note">Drag and drop to reorder list</div>
+
+    </div>
+
+  </main>
+
+  <footer class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/sankaragomathym" target="_blank">Sankara Gomathy M</a>.
+  </footer>
+
+  <script src="todo.js"></script>
+
+</body>
+</html>
