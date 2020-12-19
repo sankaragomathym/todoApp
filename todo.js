@@ -9,6 +9,7 @@ var optionsCont = document.querySelector('.options-cont');
 var activeCount = document.getElementById('activeCount');
 var filters = document.querySelector('.filters');
 var noItemsCont = document.getElementById('noItemsCont');
+var note = document.querySelector(".note");
 
 document.addEventListener("keypress", onEnter);
 document.getElementById("themeSwitcher").addEventListener("click", switchTheme);
@@ -22,13 +23,15 @@ document.getElementById("clearCompleted").addEventListener("click", clearComplet
 init();
 
 function init() {
-    //fetch json from localstorage
-    json = JSON.parse(localStorage.getItem("json"));
-    displayList();
-
     var theme = localStorage.getItem("theme");
     if(theme == "light") {
         document.body.classList.remove("dark");
+    }
+
+    //fetch json from localstorage
+    if(localStorage.getItem("json") != null) {
+        json = JSON.parse(localStorage.getItem("json"));
+        displayList();
     }
 }
 
@@ -55,9 +58,11 @@ function displayList() {
         optionsCont.classList.remove("hide");
         var count = todoCount - checkedCount;
         activeCount.textContent = count + ((count <= 1) ? " item left" : " items left");
+        note.classList.remove("hide");
     }
     else {
-        optionsCont.classList.add("hide"); 
+        optionsCont.classList.add("hide");
+        note.classList.add("hide");
     }
 }
 
@@ -78,6 +83,7 @@ function addTodo() {
     createListItem(json.length-1);
     if(json.length == 1) {
         optionsCont.classList.remove("hide");
+        note.classList.remove("hide");
     }
     
     var count = json.length - checkedCount;
@@ -240,7 +246,6 @@ function drop(event) {
     var holders = document.querySelectorAll(".list-item-holder");
     var fromParent = holders[fromIndex];
     var draggedItem = fromParent.querySelector(".list-item");
-    draggedItem.classList.remove("drag-item");
     var jsonFromEl = json[fromIndex];
 
     var toParent = event.target;
