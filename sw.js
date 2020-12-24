@@ -8,7 +8,6 @@ const assets = [
   '/images/bg-desktop-light.jpg',
   '/images/bg-mobile-dark.jpg',
   '/images/bg-mobile-light.jpg',
-  '/images/favicon-32x32.png',
   '/images/icon-check.svg',
   '/images/icon-cross.svg',
   '/images/icon-moon.svg',

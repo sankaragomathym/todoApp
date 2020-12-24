@@ -74,6 +74,7 @@ main {
 
 .container {
     width: 580px;
+    margin-bottom: 80px;
 }
 
 .heading {

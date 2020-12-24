@@ -73,6 +73,9 @@ function onEnter(e) {
 }
 
 function addTodo() {
+    if(!input.value.trim().length) {
+        return;
+    }
     var info = {};
     info.task = input.value;
     info.completed = false;
