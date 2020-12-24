@@ -65,7 +65,7 @@ main {
     justify-content: center;
     padding: 20px;
 
-    background: url('images/bg-mobile-light.jpg') var(--body-bg) no-repeat top center/100% 28%;
+    background: url('images/bg-mobile-light.jpg') var(--body-bg) no-repeat top center/100% 200px;
 }
 
 .dark main {
@@ -271,6 +271,7 @@ input[type="checkbox"]:checked ~ .todo-task {
     color: var(--options-text);
     font-size: 0.85rem;
     text-align: center;
+    margin-top: 50px;
 }
 
 .hide {
@@ -295,10 +296,6 @@ input[type="checkbox"]:checked ~ .todo-task {
 
     .filters button {
         padding: 10px;
-    }
-    
-    .note {
-        display: none;
     }
 }
 
@@ -370,8 +367,10 @@ input[type="checkbox"]:checked ~ .todo-task {
     .options-cont, .options-cont button, .filters button {
         font-size: 0.85rem;
     }
+}
 
+@media (hover: none) {
     .note {
-        margin-top: 50px;
+        display: none;
     }
 }
