@@ -1,5 +1,7 @@
 # Frontend Mentor - Todo app
 
+**Apart from the challenge given, I have tried to make this app a Progressive Web App (PWA).**
+
 ![Design preview for the Todo app coding challenge](./design/desktop-preview.jpg)
 
 ## Welcome! 👋
